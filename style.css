@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Quitar todo los estilos por defectos */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: karla, sans-serif;
+  background-color: #222;
+  color: #ddd;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.header, .main-navbar, footer{
+  width: 100%;
+}
+
+h1,h2{
+  text-wrap: balance;
+  margin: 10px 0;
+  text-align: center;
+}
+p{
+  text-wrap: pretty;
+  text-align: justify;
+}
+
+/* HEADER */
+.header{
+  background-color: #467;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 0 20px 0 #444;
+}
+
+.main-navbar ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.main-navbar li{
+  list-style: none;
+  margin: 10px 6px;
+}
+
+.main-navbar a{
+  text-decoration: none;
+  color: #ddd;
+  transition: color .2s, background-color .4s;
+}
+.main-navbar a:hover{
+  color: #89e;
+  text-decoration: underline;
+  background-color: #89e3;
+}
+
+.main-navbar, .header-logo{
+  flex-grow: 1;
+}
+
+.main-navbar{
+  flex-grow: 1;
+}
+
+
+/* MAIN */
+.main-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 20px 0;
+}
+
+
+aside, main{
+  background-color: #444;
+  padding: 10px 20px;
+  flex-basis: 0;
+}
+
+.main-wrapper aside{
+  flex-grow: 1;
+}
+
+
+/* Solamnente el main tendra ocupara 4 veces su espaci0 */
+main{
+  min-width: 300px;
+  flex-grow: 4;
+}
+aside:last-child{
+  min-width: 10rem;
+}
+
+.main-wrapper{
+  max-width: 1024px;
+}
+
+/* SECONDARY NAVBAR */
+.Secondary-navbar ul{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.Secondary-navbar li{
+  list-style: none;
+  margin: 10px 6px;
+}
+
+.Secondary-navbar a{
+  text-decoration: none;
+  color: #59e;
+  transition: color .2s, text-shadow .9s;
+}
+.Secondary-navbar a:hover{
+  color: #48f9;
+  text-shadow: 0 0 2px #222;
+  text-decoration: underline;
+}
+.Secondary-navbar{
+  text-align: center;
+  min-width: 10rem; 
+}
+
+/* FOOTER */
+footer{
+  background-color: #467;
+  padding: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media screen and(max-width:480px) {
+  .main-wrapper{
+    flex-direction: column;
+  }
+}
